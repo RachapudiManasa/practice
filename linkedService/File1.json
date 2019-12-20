@@ -1,0 +1,13 @@
+{
+	"name": "File1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://datalakestorageset.azuredatalakestore.net/webhdfs/v1",
+			"tenant": "7896c5aa-71b4-47c3-98d4-e707bdd7462f",
+			"subscriptionId": "6b54873a-1536-473e-80d3-3a842636fa49",
+			"resourceGroupName": "Resouce1"
+		}
+	}
+}
