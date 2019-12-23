@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Factorypractice1"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"FileServer1_password": {
+			"value": ""
+		},
+		"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://datastoragesets.azuredatalakestore.net/webhdfs/v1"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_tenant": {
+			"value": "7896c5aa-71b4-47c3-98d4-e707bdd7462f"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_subscriptionId": {
+			"value": "6b54873a-1536-473e-80d3-3a842636fa49"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
+			"value": "Resource2"
+		},
+		"File1_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://datalakestorageset.azuredatalakestore.net/webhdfs/v1"
+		},
+		"File1_properties_typeProperties_tenant": {
+			"value": "7896c5aa-71b4-47c3-98d4-e707bdd7462f"
+		},
+		"File1_properties_typeProperties_subscriptionId": {
+			"value": "6b54873a-1536-473e-80d3-3a842636fa49"
+		},
+		"File1_properties_typeProperties_resourceGroupName": {
+			"value": "Resouce1"
+		},
+		"FileServer1_properties_typeProperties_host": {
+			"value": "D:\\ZippedFolders"
+		},
+		"FileServer1_properties_typeProperties_userId": {
+			"value": "manasa.rachapudi"
+		}
+	}
+}
