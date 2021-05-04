@@ -2,12 +2,13 @@
 	"name": "data",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage1",
+			"referenceName": "Blob",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
 			"container": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "testmanasa"
 			},
 			"directory": {
 				"type": "string"
