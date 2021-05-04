@@ -53,6 +53,7 @@
 						"referenceName": "data",
 						"type": "DatasetReference",
 						"parameters": {
+							"container": "testmanasa",
 							"directory": {
 								"value": "@pipeline().parameters.FolderName",
 								"type": "Expression"
@@ -85,10 +86,12 @@
 		],
 		"parameters": {
 			"FileName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "two.csv"
 			},
 			"FolderName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "one"
 			}
 		},
 		"annotations": []
