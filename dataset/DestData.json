@@ -12,7 +12,7 @@
 			},
 			"DestFileName": {
 				"type": "string",
-				"defaultValue": "twodest.csv"
+				"defaultValue": "desttwo.csv"
 			}
 		},
 		"annotations": [],
