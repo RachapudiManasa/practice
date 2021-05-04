@@ -29,8 +29,7 @@
 					"sink": {
 						"type": "DelimitedTextSink",
 						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings",
-							"copyBehavior": "FlattenHierarchy"
+							"type": "AzureBlobStorageWriteSettings"
 						},
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
@@ -50,33 +49,26 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "data",
+						"referenceName": "SourceData",
 						"type": "DatasetReference",
 						"parameters": {
-							"container": "testmanasa",
-							"directory": {
-								"value": "@pipeline().parameters.FolderName",
-								"type": "Expression"
-							},
-							"filename": {
-								"value": "@pipeline().parameters.FileName",
-								"type": "Expression"
-							}
+							"Container": "testmanasa",
+							"Directory": "One",
+							"Filename": "two.csv"
 						}
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText3",
+						"referenceName": "DestData",
 						"type": "DatasetReference",
 						"parameters": {
-							"Container": "Destination",
-							"Folder": {
-								"value": "@pipeline().parameters.FolderName",
+							"DestDirectory": {
+								"value": "@concat(pipeline().parameters.FolderName,'dest')",
 								"type": "Expression"
 							},
-							"File": {
-								"value": "@pipeline().parameters.FileName",
+							"DestFileName": {
+								"value": "@concat('dest',pipeline().parameters.FileName)",
 								"type": "Expression"
 							}
 						}
