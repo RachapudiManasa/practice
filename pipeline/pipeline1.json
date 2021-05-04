@@ -67,7 +67,18 @@
 				"outputs": [
 					{
 						"referenceName": "DelimitedText3",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Container": "Destination",
+							"Folder": {
+								"value": "@pipeline().parameters.FolderName",
+								"type": "Expression"
+							},
+							"File": {
+								"value": "@pipeline().parameters.FileName",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
