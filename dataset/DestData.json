@@ -1,0 +1,46 @@
+{
+	"name": "DestData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "MyBlobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"DestDirectory": {
+				"type": "string",
+				"defaultValue": "OneDest"
+			},
+			"DestFileName": {
+				"type": "string",
+				"defaultValue": "twodest.csv"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().DestFileName",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().DestDirectory",
+					"type": "Expression"
+				},
+				"container": "testmanasa"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			}
+		]
+	}
+}
